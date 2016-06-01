@@ -2,7 +2,7 @@
   "name": "ImDB ",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "Your description",
+  "description": "Gives you the imdb rating of the movie selected.",
 
   "permissions": [
 
@@ -10,7 +10,12 @@
 
   ],
 
-
+  "content_scripts": [
+      {
+      "matches": ["http://www.projectfreetvfull.com/*"],
+      "js": ["myscript.js"]
+      }
+    ],
   "background": {
 
     "scripts": ["scriptMovie.js"]
